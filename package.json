@@ -3,14 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://esam-web-dev.github.io/SolnHub-Modern-Marketing-Agency-Website/",
+  "homepage": "https://esam-web-dev.github.io/SolnHub-React-Landing-Page/",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "formik": "^2.4.9",
     "react": "^19.2.5",
