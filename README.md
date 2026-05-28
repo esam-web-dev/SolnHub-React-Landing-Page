@@ -36,7 +36,7 @@ The project is designed to showcase services, portfolio, and contact sections wi
 
 ## 📸 Project Preview
 
-![SolnHub Preview](./screenshot.png)
+![SolnHub Preview](./screnS2.jpeg)
 
 ---
 
