@@ -1,0 +1,108 @@
+/* ===========================
+   TESTIMONIALS — MODERN UI
+   =========================== */
+
+.testimonials .item-list {
+    margin-top: 30px;
+    row-gap: 30px;
+    display: grid;
+}
+
+/* Card */
+.testimonials .item {
+    padding: 48px 16px;
+    background: #111;
+    border-radius: 14px;
+    position: relative;
+    transition: 0.35s ease;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.testimonials .item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* Bottom gradient bar */
+.testimonials .item::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(45deg, rgba(87,100,222,1), rgba(85,179,213,1));
+    transition: 0.35s ease;
+    border-radius: 10px;
+}
+
+.testimonials .item:hover::after {
+    width: 100%;
+}
+
+/* Image */
+.testimonials .item-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 28px auto;
+    border: 3px solid rgba(255,255,255,0.15);
+    transition: 0.35s ease;
+}
+
+.testimonials .item:hover .item-img {
+    border-color: var(--clr-robin-blue);
+}
+
+/* Name */
+.testimonials .item-name {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Rating */
+.testimonials .item-rating {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonials .item-rating li {
+    margin: 0 10px;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+.testimonials .item-rating li:hover {
+    transform: scale(1.2);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media screen and (min-width: 768px) {
+    .testimonials .section-t {
+        text-align: center;
+    }
+
+    .testimonials .section-t::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .testimonials .item-list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .testimonials .item-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

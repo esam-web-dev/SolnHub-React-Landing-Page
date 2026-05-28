@@ -1,0 +1,77 @@
+/* ===========================
+   SERVICES — MODERN UI
+   =========================== */
+
+.services {
+    padding: 80px 0;
+}
+
+.services-content {
+    text-align: center;
+}
+
+/* Grid list */
+.services .item-list {
+    margin-top: 40px;
+    display: grid;
+    row-gap: 40px;
+}
+
+/* Single service card */
+.services .item {
+    background: #111;
+    padding: 40px 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: 0.35s ease;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.services .item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* Icon */
+.services .item-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    fill: url(#blue-gradient);
+    transition: 0.35s ease;
+}
+
+.services .item:hover .item-icon {
+    transform: scale(1.15);
+}
+
+/* Title */
+.services .item-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* Text */
+.services .item-text {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media screen and (min-width: 768px) {
+    .services .item-list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .services .item-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

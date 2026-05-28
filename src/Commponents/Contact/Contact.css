@@ -1,0 +1,155 @@
+/* ===========================
+   CONTACT SECTION — MODERN UI
+   =========================== */
+
+.contact .contact-content {
+    display: grid;
+    row-gap: 60px;
+    padding: 20px 0;
+}
+
+/* Inputs */
+.contact .form-control {
+    height: 56px;
+    width: 100%;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #0f0f0f;
+    color: var(--clr-white);
+    font-size: 18px;
+    padding: 0 20px;
+    transition: 0.25s ease;
+}
+
+.contact .form-control:focus {
+    border-color: var(--clr-robin-blue);
+    box-shadow: 0 0 0 3px rgba(85, 179, 213, 0.25);
+    outline: none;
+}
+
+/* Label */
+.contact .form-control-text {
+    display: block;
+    font-size: 16px;
+    color: var(--clr-white);
+    margin: 6px 0 14px;
+}
+
+/* Submit Button */
+.contact .submit-btn {
+    background: linear-gradient(45deg, #5764de, #55b3d5);
+    color: var(--clr-white);
+    padding: 16px 32px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(85, 179, 213, 0.35);
+}
+
+/* Map */
+.contact .map-content {
+    margin-top: 80px;
+}
+
+/* ===========================
+   INFO BOXES
+   =========================== */
+
+.info {
+    margin-top: -10px;
+}
+
+.info .item {
+    padding: 40px;
+    background: #111;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+    border: 1px solid #222;
+}
+
+.info .item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Bottom gradient bar */
+.info .item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #5764de, #55b3d5);
+    transition: 0.3s ease;
+}
+
+.info .item:hover::after {
+    width: 100%;
+}
+
+/* Text */
+.info .item-info-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.info .item-icon {
+    font-size: 45px;
+    margin-bottom: 12px;
+    color: var(--clr-robin-blue);
+}
+
+.info .item-list {
+    display: grid;
+    row-gap: 30px;
+}
+
+.info .item-link {
+    margin-top: 18px;
+    display: inline-block;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.info .item:hover .item-link {
+    color: var(--clr-robin-blue);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media screen and (min-width: 768px) {
+    .info .item-list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contact .contact-content {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+        row-gap: 0;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .info .item-list {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+    }
+}

@@ -1,0 +1,83 @@
+/* ===========================
+   QUALITIES — ULTRA MODERN UI
+   =========================== */
+
+.qualities .section-t {
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* Icon */
+.qualities .item-icon {
+    margin-right: 22px;
+    font-size: 42px;
+    color: var(--clr-robin-blue);
+    transition: 0.35s ease;
+    opacity: 0.9;
+}
+
+/* Title */
+.qualities .item-title {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* List */
+.qualities .item-list {
+    row-gap: 28px;
+    display: grid;
+}
+
+/* Content wrapper */
+.qualities-content {
+    row-gap: 55px;
+    display: grid;
+}
+
+/* Item */
+.qualities .item {
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: 0.35s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* Hover — ناعم جداً */
+.qualities .item:hover {
+    transform: translateX(6px);
+}
+
+.qualities .item:hover .item-icon {
+    transform: translateY(-3px) scale(1.05);
+    color: var(--clr-crazy-blue);
+    opacity: 1;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(25px) }
+    100% { opacity: 1; transform: translateY(0) }
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media screen and (min-width: 992px) {
+    .qualities-content {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 60px;
+    }
+
+    .qualities .section-t {
+        text-align: left;
+    }
+}

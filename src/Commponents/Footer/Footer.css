@@ -1,0 +1,80 @@
+/* ===========================
+   FOOTER — SOFT MODERN UI
+   =========================== */
+
+.footer {
+    padding: 45px 0;
+    background: #0d0d0d;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* Content */
+.footer-content {
+    display: grid;
+    row-gap: 22px;
+    text-align: center;
+    color: #d0d0d0;
+    font-size: 16px;
+    line-height: 1.75;
+    transform: translateY(15px);
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.2s;
+}
+
+/* Links */
+.footer-content a {
+    color: var(--clr-robin-blue);
+    transition: 0.3s ease;
+    opacity: 0.85;
+}
+
+.footer-content a:hover {
+    color: #8fd9ff;
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Divider */
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 25px 0;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media screen and (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 0;
+        text-align: left;
+        align-items: center;
+    }
+
+    .footer-content p {
+        text-align: left;
+    }
+
+    .footer-content span {
+        text-align: right;
+        display: block;
+    }
+}

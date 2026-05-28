@@ -1,0 +1,90 @@
+/* ===========================
+   ABOUT — MODERN MOTION UI
+   =========================== */
+
+.about-content {
+    display: grid;
+    row-gap: 40px;
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* Image */
+.about-img {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.2s;
+}
+
+.about-img img {
+    width: 100%;
+    transition: 0.4s ease;
+}
+
+.about-img:hover img {
+    transform: scale(1.05);
+}
+
+/* Text block */
+.about-text {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.35s;
+}
+
+.about-text p {
+    color: #ccc;
+    line-height: 1.75;
+    margin-bottom: 20px;
+}
+
+/* Title */
+.about-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    background: linear-gradient(to right, var(--clr-robin-blue), var(--clr-crazy-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Button */
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, var(--clr-robin-blue), var(--clr-crazy-blue));
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(85, 179, 213, 0.35);
+}
+
+/* Animation keyframes */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media screen and (min-width: 992px) {
+    .about-content {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 60px;
+    }
+}

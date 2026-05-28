@@ -1,0 +1,60 @@
+/* ===========================
+   FEATURES — MODERN UI
+   =========================== */
+
+.features .item-head {
+    padding: 20px 28px;
+    cursor: pointer;
+    background: #111;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+    border: 1px solid #222;
+}
+
+.features .item-head:hover {
+    background: #151515;
+    transform: translateY(-2px);
+}
+
+/* Border highlight when active */
+.features .item-head-border {
+    border-bottom: 2px solid var(--clr-robin-blue);
+}
+
+/* Icon */
+.features .item-icon {
+    font-size: 28px;
+    transition: 0.3s ease;
+    color: var(--clr-robin-blue);
+}
+
+/* Rotate when open */
+.features .item-icon-rotate {
+    transform: rotate(45deg);
+}
+
+/* Body (collapsed) */
+.features .item-body {
+    margin-top: 12px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, opacity 0.3s ease;
+    opacity: 0;
+    padding: 0 5px;
+}
+
+/* Body (expanded) */
+.features .item-body-show {
+    max-height: 300px;
+    opacity: 1;
+}
+
+/* Text inside body */
+.features .item-body .text {
+    padding: 16px 0;
+    line-height: 1.7;
+    color: #ccc;
+}
